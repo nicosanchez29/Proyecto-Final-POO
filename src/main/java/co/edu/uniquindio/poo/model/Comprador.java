@@ -10,4 +10,19 @@ super(id, nombre, identificacion, telefono, correo, puntosReputacion, categoriaU
         return 0;
     }
 
+    @Override
+    public void sumarPuntos() {
+
+    }
+
+    @Override
+    public CategoriaUsuario actualizarCategoria() {
+        return null;
+    }
+
+    @Override
+    public String mostrarInformacion() {
+        return "";
+    }
+
 }

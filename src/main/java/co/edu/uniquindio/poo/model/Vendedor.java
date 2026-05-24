@@ -9,4 +9,19 @@ public class Vendedor extends Usuario {
     public double calcularBeneficio() {
         return 0;
     }
+
+    @Override
+    public void sumarPuntos() {
+
+    }
+
+    @Override
+    public CategoriaUsuario actualizarCategoria() {
+        return null;
+    }
+
+    @Override
+    public String mostrarInformacion() {
+        return "";
+    }
 }
