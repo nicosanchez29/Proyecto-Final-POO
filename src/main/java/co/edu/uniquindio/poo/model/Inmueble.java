@@ -18,8 +18,9 @@ public abstract class Inmueble {
     protected MotorRecomendacion motorRecomendacion;
     protected BuscadorInmueble buscadorInmueble;
     protected Publicacion publicacion;
+    protected InmoSmart ownedByInmoSmart;
 
-    public Inmueble(String codigo, String direccion, String ciudad, String area, double precio, TipoInmueble tipoInmueble, EstadoInmueble estadoInmueble, SistemaReportes sistemaReportes, ArrayList<Oferta> listaOfertas, Vendedor vendedor, MotorRecomendacion motorRecomendacion, BuscadorInmueble buscadorInmueble, Publicacion publicacion) {
+    public Inmueble(String codigo, String direccion, String ciudad, String area, double precio, TipoInmueble tipoInmueble, EstadoInmueble estadoInmueble, SistemaReportes sistemaReportes, ArrayList<Oferta> listaOfertas, Vendedor vendedor, MotorRecomendacion motorRecomendacion, BuscadorInmueble buscadorInmueble, Publicacion publicacion, InmoSmart inmoSmart) {
         this.codigo = codigo;
         this.direccion = direccion;
         this.ciudad = ciudad;
@@ -33,6 +34,7 @@ public abstract class Inmueble {
         this.motorRecomendacion = motorRecomendacion;
         this.buscadorInmueble = buscadorInmueble;
         this.publicacion = publicacion;
+        this.ownedByInmoSmart = inmoSmart;
     }
 
     public String getCodigo() {
@@ -130,6 +132,23 @@ public abstract class Inmueble {
     public void setBuscadorInmueble(BuscadorInmueble buscadorInmueble) {
         this.buscadorInmueble = buscadorInmueble;
     }
+
+    public Publicacion getPublicacion() {
+        return publicacion;
+    }
+
+    public void setPublicacion(Publicacion publicacion) {
+        this.publicacion = publicacion;
+    }
+
+    public InmoSmart getOwnedByInmoSmart() {
+        return ownedByInmoSmart;
+    }
+
+    public void setOwnedByInmoSmart(InmoSmart ownedByInmoSmart) {
+        this.ownedByInmoSmart = ownedByInmoSmart;
+    }
+
     public abstract double calcularImpuesto();
     public abstract EstadoInmueble estaDisponible();
     public abstract EstadoInmueble cambiarEstado();

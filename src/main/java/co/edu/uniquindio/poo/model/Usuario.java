@@ -1,5 +1,7 @@
 package co.edu.uniquindio.poo.model;
 
+import java.util.ArrayList;
+
 public abstract class Usuario {
     protected String id;
     protected String nombre;
@@ -8,8 +10,13 @@ public abstract class Usuario {
     protected String correo;
     protected int puntosReputacion;
     protected CategoriaUsuario categoriaUsuario;
+    //Relaciones
+    protected ArrayList<Notificacion> listaNotificaciones;
+    protected SistemaReputacion sistemaReputacion;
+    protected SistemaReportes sistemaReportes;
+    protected InmoSmart ownedByInmoSmart;
 
-    public Usuario(String id, String nombre, String identificacion, String telefono, String correo, int puntosReputacion, CategoriaUsuario categoriaUsuario) {
+    public Usuario(String id, String nombre, String identificacion, String telefono, String correo, int puntosReputacion, CategoriaUsuario categoriaUsuario, ArrayList<Notificacion> listaNotificaciones, SistemaReputacion sistemaReputacion, SistemaReportes sistemaReportes, InmoSmart ownedByInmoSmart) {
         this.id = id;
         this.nombre = nombre;
         this.identificacion = identificacion;
@@ -17,6 +24,10 @@ public abstract class Usuario {
         this.correo = correo;
         this.puntosReputacion = puntosReputacion;
         this.categoriaUsuario = categoriaUsuario;
+        this.listaNotificaciones = listaNotificaciones;
+        this.sistemaReputacion = sistemaReputacion;
+        this.sistemaReportes = sistemaReportes;
+        this.ownedByInmoSmart = ownedByInmoSmart;
     }
 
     public String getId() {
@@ -66,6 +77,47 @@ public abstract class Usuario {
     public void setPuntosReputacion(int puntosReputacion) {
         this.puntosReputacion = puntosReputacion;
     }
+
+    public CategoriaUsuario getCategoriaUsuario() {
+        return categoriaUsuario;
+    }
+
+    public void setCategoriaUsuario(CategoriaUsuario categoriaUsuario) {
+        this.categoriaUsuario = categoriaUsuario;
+    }
+
+    public ArrayList<Notificacion> getListaNotificaciones() {
+        return listaNotificaciones;
+    }
+
+    public void setListaNotificaciones(ArrayList<Notificacion> listaNotificaciones) {
+        this.listaNotificaciones = listaNotificaciones;
+    }
+
+    public SistemaReputacion getSistemaReputacion() {
+        return sistemaReputacion;
+    }
+
+    public void setSistemaReputacion(SistemaReputacion sistemaReputacion) {
+        this.sistemaReputacion = sistemaReputacion;
+    }
+
+    public SistemaReportes getSistemaReportes() {
+        return sistemaReportes;
+    }
+
+    public void setSistemaReportes(SistemaReportes sistemaReportes) {
+        this.sistemaReportes = sistemaReportes;
+    }
+
+    public InmoSmart getOwnedByInmoSmart() {
+        return ownedByInmoSmart;
+    }
+
+    public void setOwnedByInmoSmart(InmoSmart ownedByInmoSmart) {
+        this.ownedByInmoSmart = ownedByInmoSmart;
+    }
+
     public abstract double calcularBeneficio();
     public abstract void sumarPuntos();
     public abstract CategoriaUsuario actualizarCategoria();
