@@ -67,14 +67,8 @@ public abstract class Usuario {
         this.puntosReputacion = puntosReputacion;
     }
     public abstract double calcularBeneficio();
-    public void sumarPuntos(){
-
-    }
-    public categoriaUsuario actualizarCategoria(){
-
-    }
-    public String mostrarInformacion(){
-
-    }
+    public abstract void sumarPuntos();
+    public abstract CategoriaUsuario actualizarCategoria();
+    public abstract String mostrarInformacion();
 
 }
