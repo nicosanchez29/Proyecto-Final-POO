@@ -5,9 +5,10 @@ import java.util.ArrayList;
 public class Apartamento extends Inmueble {
     private int piso;
     private double administracion;
+    protected InmoSmart ownedByInmoSmart;
 
-    public Apartamento(String codigo, String direccion, String ciudad, String area, double precio, TipoInmueble tipoInmueble, EstadoInmueble estadoInmueble, SistemaReportes sistemaReportes, ArrayList<Oferta> listaOfertas, Vendedor vendedor, MotorRecomendacion motorRecomendacion, BuscadorInmueble buscadorInmueble, Publicacion publicacion, int piso, double administracion) {
-        super(codigo, direccion, ciudad, area, precio, tipoInmueble, estadoInmueble, sistemaReportes, listaOfertas, vendedor, motorRecomendacion, buscadorInmueble, publicacion);
+    public Apartamento(String codigo, String direccion, String ciudad, String area, double precio, TipoInmueble tipoInmueble, EstadoInmueble estadoInmueble, SistemaReportes sistemaReportes, ArrayList<Oferta> listaOfertas, Vendedor vendedor, MotorRecomendacion motorRecomendacion, BuscadorInmueble buscadorInmueble, Publicacion publicacion, int piso, double administracion, InmoSmart inmoSmart) {
+        super(codigo, direccion, ciudad, area, precio, tipoInmueble, estadoInmueble, sistemaReportes, listaOfertas, vendedor, motorRecomendacion, buscadorInmueble, publicacion, inmoSmart);
         this.piso = piso;
         this.administracion = administracion;
     }
