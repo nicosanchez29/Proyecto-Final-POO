@@ -17,4 +17,16 @@ public class InmoSmart {
     private ArrayList <Publicacion> listaPublicaciones;
     private ArrayList <Oferta> listaOfertas;
 
+
+    public InmoSmart(String nombre, String codigo) {
+        this.nombre = nombre;
+        this.codigo = codigo;
+        this.listaUsuarios = new ArrayList<>();
+        this.listaTransaccion = new ArrayList<>();
+        this.listaInmuebles = new ArrayList<>();
+        this.listaPublicaciones = new ArrayList<>();
+        this.listaOfertas = new ArrayList<>();
+    }
 }
+
+

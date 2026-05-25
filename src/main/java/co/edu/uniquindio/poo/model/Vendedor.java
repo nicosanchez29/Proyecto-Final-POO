@@ -8,11 +8,11 @@ public class Vendedor extends Usuario implements iPublicador{
     private ArrayList<Publicacion> listaPublicaciones;
     private ArrayList<Transaccion> listaTransacciones;
 
-    public Vendedor(String id, String nombre, String identificacion, String telefono, String correo, int puntosReputacion, CategoriaUsuario categoriaUsuario, ArrayList<Notificacion> listaNotificaciones, SistemaReputacion sistemaReputacion, SistemaReportes sistemaReportes, InmoSmart ownedByInmoSmart, ArrayList<Inmueble> listaInmuebles, ArrayList<Publicacion> listaPublicaciones, ArrayList<Transaccion> listaTransacciones) {
-        super(id, nombre, identificacion, telefono, correo, puntosReputacion, categoriaUsuario, listaNotificaciones, sistemaReputacion, sistemaReportes, ownedByInmoSmart);
-        this.listaInmuebles = listaInmuebles;
-        this.listaPublicaciones = listaPublicaciones;
-        this.listaTransacciones = listaTransacciones;
+    public Vendedor(String id, String nombre, String identificacion, String telefono, String correo, int puntosReputacion, CategoriaUsuario categoriaUsuario, SistemaReputacion sistemaReputacion, SistemaReportes sistemaReportes, InmoSmart ownedByInmoSmart) {
+        super(id, nombre, identificacion, telefono, correo, puntosReputacion, categoriaUsuario, sistemaReputacion, sistemaReportes, ownedByInmoSmart);
+        this.listaInmuebles = new ArrayList<>();
+        this.listaPublicaciones = new ArrayList<>();
+        this.listaTransacciones = new ArrayList<>();
     }
 
     public ArrayList<Inmueble> getListaInmuebles() {
@@ -59,3 +59,4 @@ public class Vendedor extends Usuario implements iPublicador{
         return "";
     }
 }
+

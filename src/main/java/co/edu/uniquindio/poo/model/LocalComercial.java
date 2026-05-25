@@ -1,12 +1,10 @@
 package co.edu.uniquindio.poo.model;
 
-import java.util.ArrayList;
-
 public class LocalComercial extends Inmueble{
     private String tipoNegocio;
 
-    public LocalComercial(String codigo, String direccion, String ciudad, String area, double precio, TipoInmueble tipoInmueble, EstadoInmueble estadoInmueble, SistemaReportes sistemaReportes, ArrayList<Oferta> listaOfertas, Vendedor vendedor, MotorRecomendacion motorRecomendacion, BuscadorInmueble buscadorInmueble, Publicacion publicacion, String tipoNegocio, InmoSmart inmoSmart) {
-        super(codigo, direccion, ciudad, area, precio, tipoInmueble, estadoInmueble, sistemaReportes, listaOfertas, vendedor, motorRecomendacion, buscadorInmueble, publicacion, inmoSmart);
+    public LocalComercial(String codigo, String direccion, String ciudad, String area, double precio, TipoInmueble tipoInmueble, EstadoInmueble estadoInmueble, InmoSmart inmoSmart, String tipoNegocio) {
+        super(codigo, direccion, ciudad, area, precio, tipoInmueble, estadoInmueble, inmoSmart);
         this.tipoNegocio = tipoNegocio;
     }
 
@@ -40,3 +38,4 @@ public class LocalComercial extends Inmueble{
     }
 
 }
+

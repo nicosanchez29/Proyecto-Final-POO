@@ -20,7 +20,7 @@ public abstract class Inmueble {
     protected Publicacion publicacion;
     protected InmoSmart ownedByInmoSmart;
 
-    public Inmueble(String codigo, String direccion, String ciudad, String area, double precio, TipoInmueble tipoInmueble, EstadoInmueble estadoInmueble, SistemaReportes sistemaReportes, ArrayList<Oferta> listaOfertas, Vendedor vendedor, MotorRecomendacion motorRecomendacion, BuscadorInmueble buscadorInmueble, Publicacion publicacion, InmoSmart inmoSmart) {
+    public Inmueble(String codigo, String direccion, String ciudad, String area, double precio, TipoInmueble tipoInmueble, EstadoInmueble estadoInmueble, InmoSmart inmoSmart) {
         this.codigo = codigo;
         this.direccion = direccion;
         this.ciudad = ciudad;
@@ -28,12 +28,12 @@ public abstract class Inmueble {
         this.precio = precio;
         this.tipoInmueble = tipoInmueble;
         this.estadoInmueble = estadoInmueble;
-        this.sistemaReportes = sistemaReportes;
-        this.listaOfertas = listaOfertas;
-        this.vendedor = vendedor;
-        this.motorRecomendacion = motorRecomendacion;
-        this.buscadorInmueble = buscadorInmueble;
-        this.publicacion = publicacion;
+        this.sistemaReportes = null;
+        this.listaOfertas = new ArrayList<>();
+        this.vendedor = null;
+        this.motorRecomendacion = null;
+        this.buscadorInmueble = null;
+        this.publicacion = null;
         this.ownedByInmoSmart = inmoSmart;
     }
 
@@ -154,3 +154,4 @@ public abstract class Inmueble {
     public abstract EstadoInmueble cambiarEstado();
     public abstract String mostrarDetalles();
 }
+

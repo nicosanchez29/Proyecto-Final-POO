@@ -16,7 +16,7 @@ public abstract class Usuario {
     protected SistemaReportes sistemaReportes;
     protected InmoSmart ownedByInmoSmart;
 
-    public Usuario(String id, String nombre, String identificacion, String telefono, String correo, int puntosReputacion, CategoriaUsuario categoriaUsuario, ArrayList<Notificacion> listaNotificaciones, SistemaReputacion sistemaReputacion, SistemaReportes sistemaReportes, InmoSmart ownedByInmoSmart) {
+    public Usuario(String id, String nombre, String identificacion, String telefono, String correo, int puntosReputacion, CategoriaUsuario categoriaUsuario, SistemaReputacion sistemaReputacion, SistemaReportes sistemaReportes, InmoSmart ownedByInmoSmart) {
         this.id = id;
         this.nombre = nombre;
         this.identificacion = identificacion;
@@ -24,7 +24,7 @@ public abstract class Usuario {
         this.correo = correo;
         this.puntosReputacion = puntosReputacion;
         this.categoriaUsuario = categoriaUsuario;
-        this.listaNotificaciones = listaNotificaciones;
+        this.listaNotificaciones = new ArrayList<>();
         this.sistemaReputacion = sistemaReputacion;
         this.sistemaReportes = sistemaReportes;
         this.ownedByInmoSmart = ownedByInmoSmart;
@@ -124,3 +124,4 @@ public abstract class Usuario {
     public abstract String mostrarInformacion();
 
 }
+
