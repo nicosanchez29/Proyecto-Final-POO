@@ -27,6 +27,7 @@ public class InmoSmart {
         this.listaPublicaciones = new ArrayList<>();
         this.listaOfertas = new ArrayList<>();
     }
+    hola
 }
 
 
