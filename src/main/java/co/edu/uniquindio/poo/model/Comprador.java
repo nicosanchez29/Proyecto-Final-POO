@@ -7,11 +7,11 @@ public class Comprador extends Usuario implements iOperadorCompra {
     private ArrayList<Oferta> listaOfertas;
     private HistorialBusqueda historialBusqueda;
 
-    public Comprador(String id, String nombre, String identificacion, String telefono, String correo, int puntosReputacion, CategoriaUsuario categoriaUsuario, ArrayList<Notificacion> listaNotificaciones, SistemaReputacion sistemaReputacion, SistemaReportes sistemaReportes, InmoSmart ownedByInmoSmart, ArrayList<Transaccion> listaTransacciones, ArrayList<Oferta> listaOfertas, HistorialBusqueda historialBusqueda) {
-        super(id, nombre, identificacion, telefono, correo, puntosReputacion, categoriaUsuario, listaNotificaciones, sistemaReputacion, sistemaReportes, ownedByInmoSmart);
-        this.listaTransacciones = listaTransacciones;
-        this.listaOfertas = listaOfertas;
-        this.historialBusqueda = historialBusqueda;
+    public Comprador(String id, String nombre, String identificacion, String telefono, String correo, int puntosReputacion, CategoriaUsuario categoriaUsuario, SistemaReputacion sistemaReputacion, SistemaReportes sistemaReportes, InmoSmart ownedByInmoSmart) {
+        super(id, nombre, identificacion, telefono, correo, puntosReputacion, categoriaUsuario, sistemaReputacion, sistemaReportes, ownedByInmoSmart);
+        this.listaTransacciones = new ArrayList<>();
+        this.listaOfertas = new ArrayList<>();
+        this.historialBusqueda = null;
     }
 
     public ArrayList<Transaccion> getListaTransacciones() {
@@ -59,3 +59,4 @@ public class Comprador extends Usuario implements iOperadorCompra {
     }
 
 }
+

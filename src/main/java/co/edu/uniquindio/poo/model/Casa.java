@@ -1,14 +1,13 @@
 package co.edu.uniquindio.poo.model;
 
-import java.util.ArrayList;
-
 public class Casa extends Inmueble{
     private int numeroHabitaciones;
     private boolean tieneGaraje;
     //Constructor
 
-    public Casa(String codigo, String direccion, String ciudad, String area, double precio, TipoInmueble tipoInmueble, EstadoInmueble estadoInmueble, SistemaReportes sistemaReportes, ArrayList<Oferta> listaOfertas, Vendedor vendedor, MotorRecomendacion motorRecomendacion, BuscadorInmueble buscadorInmueble, Publicacion publicacion, int numeroHabitaciones, boolean tieneGaraje, InmoSmart inmoSmart) {
-        super(codigo, direccion, ciudad, area, precio, tipoInmueble, estadoInmueble, sistemaReportes, listaOfertas, vendedor, motorRecomendacion, buscadorInmueble, publicacion, inmoSmart);
+
+    public Casa(String codigo, String direccion, String ciudad, String area, double precio, TipoInmueble tipoInmueble, EstadoInmueble estadoInmueble, InmoSmart inmoSmart, int numeroHabitaciones, boolean tieneGaraje) {
+        super(codigo, direccion, ciudad, area, precio, tipoInmueble, estadoInmueble, inmoSmart);
         this.numeroHabitaciones = numeroHabitaciones;
         this.tieneGaraje = tieneGaraje;
     }
@@ -52,3 +51,4 @@ public class Casa extends Inmueble{
     //Metodos
 
 }
+
